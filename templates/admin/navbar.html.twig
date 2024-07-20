@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid" style="font-family: 'righteous';">
+        <img src="{{ asset('assets/img/arcadia.png') }}" alt="Bootstrap" width="60" height="48">
+        <a class="navbar-brand" style="font-size: 32px; margin-left: 25px;" href="index.html">Arcadia - ZOO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_user_index') }}">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_animal_index') }}">Animal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_horaire_index') }}">Horaire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_race_index') }}">Race</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_image_index') }}">Image</a>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYEE') %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_service_index') }}">Services</a>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_VETERINARIAN') %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_habitat_index') }}">Habitat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ path('app_rapport_veterinaire_index') }}">Rapport</a>
+                    </li>
+                {% endif %}
+                {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia - Zoo Écologique{% endblock %}
+
+{% block body %}
+        <!-- Header -->
+        <header class="bg-image text-center text-white d-flex align-items-center" style="background-image: url({{ asset('assets/img/Cute-little-monkey-look_3840x2160.jpg') }}); height: 80vh;">
+                <div class="container">
+                        <h1 class="display-4" style="font-size: 80px;color: rgb(246, 243, 241);">Bienvenue à ARCADIA</h1>
+                        <p class="lead" style="font-size: 26px;">Depuis 1960, Arcadia est un sanctuaire de biodiversité et d'écologie, situé près de la légendaire forêt de Brocéliande. Venez découvrir une expérience unique où la nature et la préservation se rencontrent.</p>
+                </div>
+        </header>
+
+        <!-- Services Section -->
+        <section id="services" class="py-5" style="background-image: url({{ asset('assets/img/lionceau.jpg)') }};">
+                <div class="container">
+                        <h2 class="text-center mb-5" style="color: rgba(139, 69, 19, 1);">Nos Services</h2>
+                        <div class="row">
+                                {% for service in services %}
+                                        <div class="col-md-4">
+                                                <div class="card text-center">
+                                                        <div class="card-body">
+                                                                <h5 class="card-title">{{ service.nom }}</h5>
+                                                                <p class="card-text">{{ service.description }}</p>
+                                                                <img src="" alt="{{ service.nom }}" class="img-fluid rounded-circle">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                {% endfor %}
+                        </div>
+                </div>
+        </section>
+
+        <!-- Habitats Section -->
+        <section id="habitats" class="py-5" style="background-image: url({{ asset('assets/img/539573658ef17049834e8d5462c28114.jpg') }});">
+                <section><img src="img" alt=""></section>
+                <div class="container">
+                        <h2 class="text-center mb-5" style="color: rgba(139, 69, 19, 1);">Nos Habitats</h2>
+
+                        <div class="row">
+                                {% set images = [
+                                        'arbrelion.jpg',
+                                        'gorille.jpg',
+                                        'salamandre.jpg'
+                                ] %}
+
+                                {% set classes = [
+                                        'lion',
+                                        'gorille',
+                                        'salamandre'
+                                ] %}
+
+                                {% for habitat in habitats %}
+                                        <div class="col-md-4">
+                                                <h3 class="text-center" style="color: {{ loop.index0 % 3 == 0 ? '#F4A460' : (loop.index0 % 3 == 1 ? '#50C878' : '#B0C4DE') }};">{{ habitat.nom }}</h3>
+                                                <p>{{ habitat.description }}</p>
+                                                <img src="{{ asset('assets/img/' ~ images[loop.index0 % images|length]) }}" alt="{{ habitat.nom }}" class="img-fluid rounded-circle {{ classes[loop.index0 % classes|length] }}">
+                                        </div>
+                                {% endfor %}
+                        </div>
+
+                </div>
+                <button id="btn-animal" type="button" class="btn btn-primary btn-lg">Voir les animaux</button>
+        </section>
+        <div class="container ">
+                <!-- Section pour la liste déroulante des animaux -->
+                <section id="animal-list justify-content-center align-items-center" >
+                        <div id="select" class="text-center ">
+                                <h2 style="color: rgba(139, 69, 19, 1);">Découvrez nos Animaux</h2>
+                                <p class="lead">Sélectionnez un habitat pour voir les animaux associés</p>
+                        </div>
+                        <div class="row ">
+                                <div >
+                                        <div class="dropdown">
+                                                <button class="btn btn-success dropdown-toggle justify-content-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Sélectionnez un Habitat
+                                                </button>
+                                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                                                        <li><a class="dropdown-item" onclick="showAnimals('savane')">Savane</a></li>
+                                                        <li><a class="dropdown-item" onclick="showAnimals('jungle')">Jungle</a></li>
+                                                        <li><a class="dropdown-item" onclick="showAnimals('marais')">Marais</a></li>
+                                                </ul>
+                                        </div>
+                                        <div id="animalDisplay" class="mt-3">
+                                                <!-- Liste des animaux affichée ici -->
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </div>
+
+        <!-- Avis clients -->
+        <div class="container mt-5">
+                <!-- Avis Clients Section -->
+                <section id="avis-clients" class="my-5">
+                        <div class="text-center mb-4">
+                                <h2 style="color: rgba(139, 69, 19, 1);">Ce que disent nos visiteurs</h2>
+                                <p class="lead">Découvrez les expériences de nos visiteurs</p>
+                        </div>
+                        <div id="carouselAvisClients" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                        {% for avi in avis %}
+                                                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                                        <div class="card mx-auto shadow-container border-0" style="max-width: 600px;">
+                                                                <div class="card-body">
+                                                                        <p class="card-text">"{{ avi.commentaire }}"</p>
+                                                                        <footer class="blockquote-footer rounded-circle">{{ avi.pseudo }}</footer>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        {% else %}
+                                                <div class="carousel-item active">
+                                                        <div class="card mx-auto shadow-container border-0" style="max-width: 600px;">
+                                                                <div class="card-body">
+                                                                        <p class="card-text">"Aucun avis disponible pour le moment."</p>
+                                                                        <footer class="blockquote-footer rounded-circle">N/A</footer>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        {% endfor %}
+                                </div>
+                                <!-- Contrôles du Carousel -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAvisClients" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true" style="background-color: #50C878;"></span>
+                                        <span class="visually-hidden">Précédent</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselAvisClients" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon rounded-circle" aria-hidden="true" style="background-color: #50C878;"></span>
+                                        <span class="visually-hidden">Suivant</span>
+                                </button>
+                        </div>
+                </section>
+        </div>
+{% endblock %}

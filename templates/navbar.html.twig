@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid" style="font-family: 'righteous';">
+        <img src="{{ asset('assets/img/arcadia.png') }}" alt="Bootstrap" width="60" height="48">
+        <a class="navbar-brand" style="font-size: 32px; margin-left: 25px;" href="index.html">Arcadia - ZOO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Habitats
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="savane.html">La Savane</a></li>
+                        <li><a class="dropdown-item" href="jungle.html">La Jungle</a></li>
+                        <li><a class="dropdown-item" href="marais.html">Les Marais</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="energies.html">Énergies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                {% if app.user %}
+                    {% set adminPath = '' %}
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                        {% set adminPath = path('app_user_index') %}
+                    {% elseif is_granted('ROLE_EMPLOYEE') %}
+                        {% set adminPath = path('app_service_index') %}
+                    {% elseif is_granted('ROLE_VETERINARIAN') %}
+                        {% set adminPath = path('app_rapport_veterinaire_index') %}
+                    {% endif %}
+
+                    <li class="nav-item">
+                        {% if adminPath %}
+                            <a class="nav-link" href="{{ adminPath }}">Administration</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
+                    </li>
+                {% else %}
+                    <a class="nav-link" href="{{ path('app_login') }}">Connexion PRO</a>
+
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

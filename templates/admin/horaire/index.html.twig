@@ -1,0 +1,38 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Horaire index{% endblock %}
+
+{% block body %}
+    <h1>Horaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Debut</th>
+                <th>Fin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for horaire in horaires %}
+            <tr>
+                <td>{{ horaire.id }}</td>
+                <td>{{ horaire.debut ? horaire.debut|date('H:i:s') : '' }}</td>
+                <td>{{ horaire.fin ? horaire.fin|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_horaire_edit', {'id': horaire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if horaires is empty %}
+        <a href="{{ path('app_horaire_new') }}">Ajouter</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Avis index{% endblock %}
+
+{% block body %}
+    <h1>Avis index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Pseudo</th>
+            <th>Commentaire</th>
+            <th>Visible</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for avi in avis %}
+            <tr>
+                <td>{{ avi.id }}</td>
+                <td>{{ avi.pseudo }}</td>
+                <td>{{ avi.commentaire }}</td>
+                <td>{{ avi.visible ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_avis_show', {'id': avi.id}) }}">show</a>
+                    <a href="{{ path('app_avis_edit', {'id': avi.id}) }}">edit</a>
+
+                    <!-- Bouton pour changer la visibilité -->
+                    <form method="post" action="{{ path('app_avis_toggle_visibility', {'id': avi.id}) }}" style="display:inline;">
+                        <input type="hidden" name="_method" value="PATCH" />
+                        <button type="submit" class="btn btn-secondary">
+                            {{ avi.visible ? 'Hide' : 'Show' }}
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

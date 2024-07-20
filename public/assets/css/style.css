@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    font-family: 'righteous';
+}
+.navbar-nav .nav-link {
+    font-size: 24px;
+    color: rgba(139, 69, 19, 1); 
+}   
+
+.navbar-nav .nav-link:hover{
+    color: darkgreen;
+}
+
+.nav-link .active{
+    color: darkgreen;
+}
+
+.navbar-brand{
+    color: rgba(139, 69, 19, 1);
+
+}
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#services{
+    background-repeat: no-repeat;
+    background-position: left
+    
+}
+
+.resto{
+    width: 60%;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+
+#myButton1{
+    
+    margin-top: 25px;
+    font-size: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+
+#myButton2{
+    
+    margin-top:25px;
+    font-size: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+
+#myButton3{
+    margin-top:25px;
+    font-size: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+
+.visite{
+    width: 66%;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+
+.train{
+    width: 75.6%;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3)
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+#services .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#habitats h3 {
+    color: #2c3e50;
+}
+
+.lion{
+    width: 80%;
+    height: 60%;
+    margin-left: 35px;
+    border: 0.5rem outset #F4A460;
+}
+
+.gorille, .salamandre{
+    width: 80%;
+    height: 60%;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 0.5rem outset #50C878
+}
+
+.salamandre{
+    border: 0.5rem outset #B0C4DE;
+}
+
+.btn {
+    margin-left: 45%;
+    background-color: rgba(139, 69, 19, 1)
+}
+
+.btn:hover{
+    background-color: #50C878;
+}
+
+#btn-animal{
+    text-align: center;
+}
+
+#habitats{
+    background-repeat: no-repeat;
+    background-position: right;
+    
+}
+
+#animalDisplay{
+    text-align: center;
+}
+
+#animal-list {
+    min-height: 100vh; /* Hauteur minimum de la section pour remplir l'écran */
+}
+
+
+#dropdownMenuButton{
+    margin-left: 42%;
+}
+
+
+.shadow-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre inférieure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#avis-clients .card {
+    background-color: #69aa40;
+}
+
+#avis-clients .card-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#avis-clients .blockquote-footer {
+    font-size: 20px;
+    color:#fcfbfa;
+    margin-top: 1rem;
+    text-align: center;
+    ;
+}
+
+.blockquote-footer{
+    background-color: #69aa40;
+    width: 30%;
+    position: relative;
+    left: 35%;
+
+    
+}
+
+footer {
+    background-color: rgba(44, 62, 80, 1); /* Dark background color */
+    padding: 40px 0;
+    color: white;
+    text-align: left;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+footer p, footer a {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: rgba(139, 69, 19, 1); /* Change color on hover */
+    text-decoration: none;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: rgba(139, 69, 19, 1); /* Change color on hover */
+}
+
+footer .text-center {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/*Services*/
+
+#shadow-box{
+    border-radius: 3em;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.5);
+}
+
+.custom-hr {
+    border: 0;
+    height: 4px;
+    background: #69aa40;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 2rem 0;
+}
+
+.card-title{
+    color: rgba(139, 69, 19, 1);
+}
+
+/*Savane*/
+
+.sep-savane{
+    border: 0;
+    height: 4px;
+    background: rgba(108, 78, 8, 0.5);
+    box-shadow: 0 5px 5px rgba(228, 162, 6, 0.6);
+    margin: 2rem 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#sav-head{
+    border-radius: 3em;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.5);
+}
+
+#btn-sav{
+    background-color: #F4A460;
+}
+
+#btn-sav:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: forestgreen;
+}

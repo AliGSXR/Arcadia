@@ -1,0 +1,58 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}RapportVeterinaire index{% endblock %}
+
+{% block body %}
+    <h1>RapportVeterinaire index</h1>
+
+    <!-- Formulaire de filtrage -->
+    <form method="get" action="{{ path('app_rapport_veterinaire_index') }}">
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="{{ date }}">
+        </div>
+        <div>
+            <label for="animal">Animal:</label>
+            <select id="animal" name="animal">
+                <option value="">-- Select an animal --</option>
+                {% for animal in animals %}
+                    <option value="{{ animal.id }}" {% if animal.id == animalSelectedId %}selected{% endif %}>
+                        {{ animal.prenom }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Filter</button>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Detail</th>
+            <th>Animal</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for rapport_veterinaire in rapport_veterinaires %}
+            <tr>
+                <td>{{ rapport_veterinaire.id }}</td>
+                <td>{{ rapport_veterinaire.date ? rapport_veterinaire.date|date('Y-m-d') : '' }}</td>
+                <td>{{ rapport_veterinaire.detail }}</td>
+                <td>{{ rapport_veterinaire.animal.prenom }}</td>
+                <td>
+                    <a href="{{ path('app_rapport_veterinaire_show', {'id': rapport_veterinaire.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_rapport_veterinaire_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Edit Horaire{% endblock %}
+
+{% block body %}
+    <h1>Edit Horaire</h1>
+
+    {{ include('admin/horaire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_horaire_index') }}">back to list</a>
+
+{% endblock %}
