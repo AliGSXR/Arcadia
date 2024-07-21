@@ -31,4 +31,33 @@ class PageController extends AbstractController
             'habitats' => $habitats,
         ]);
     }
+    #[Route('/services', name: 'app_services')]
+    public function services(): Response
+    {
+        return $this->render('page/services.html.twig');
+    }
+
+    #[Route('/savane', name: 'app_savane')]
+    public function savane(): Response
+    {
+        return $this->render('page/savane.html.twig');
+    }
+
+    #[Route('/jungle', name: 'app_jungle')]
+    public function jungle(): Response
+    {
+        return $this->render('page/jungle.html.twig');
+    }
+
+    #[Route('/marais', name: 'app_marais')]
+    public function marais(): Response
+    {
+        return $this->render('page/marais.html.twig');
+    }
+
+    #[Route('/energies', name: 'app_energies')]
+    public function energies(): Response
+    {
+        return $this->render('page/energies.html.twig');
+    }
 }

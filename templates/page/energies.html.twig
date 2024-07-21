@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Marais{% endblock %}
+
+{% block body %}
+
+
+<<div class="container mt-5" >
+    <h1 class="text-center mb-4">Notre Engagement Énergétique</h1>
+    <p class="text-center lead mb-5">Au Zoo Arcadia, nous sommes fiers de notre parc de panneaux solaires qui nous permet d'être totalement indépendants sur le plan énergétique.</p>
+
+    <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+            <img src="{{ asset('assets/img/panneau solaire3.jpg') }}" class="img-fluid" alt="Parc de Panneaux Solaires">
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-3">Indépendance Énergétique</h2>
+            <p class="mb-4">Depuis plusieurs années, le Zoo Arcadia s'engage dans une démarche écologique en investissant dans les énergies renouvelables. Notre parc de panneaux solaires, situé à proximité du zoo, nous permet de produire toute l'énergie nécessaire à notre fonctionnement quotidien.</p>
+            <h3 class="mb-3">Avantages des Panneaux Solaires</h3>
+            <ul>
+                <li class="mb-2">Réduction de l'empreinte carbone</li>
+                <li class="mb-2">Production d'énergie propre et renouvelable</li>
+                <li class="mb-2">Indépendance énergétique</li>
+                <li class="mb-2">Contribution à la lutte contre le changement climatique</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h3 class="mb-3">Notre Impact</h3>
+            <p class="mb-4">Grâce à notre indépendance énergétique, nous réduisons notre impact environnemental et contribuons activement à la préservation de la nature. Chaque visite que vous faites au Zoo Arcadia soutient notre engagement pour un avenir plus vert.</p>
+            <h3 class="mb-3">Technologie et Innovation</h3>
+            <p class="mb-4">Nos panneaux solaires utilisent la technologie photovoltaïque de pointe pour maximiser l'efficacité et la production d'énergie. Nous avons installé plus de 5000 panneaux couvrant une surface de 10 hectares, générant une puissance totale de 2 mégawatts.</p>
+            <h3 class="mb-3">Maintenance et Efficacité</h3>
+            <p class="mb-4">Nous assurons une maintenance régulière de nos installations pour garantir une performance optimale. Nos techniciens qualifiés surveillent constamment le système pour détecter et résoudre rapidement tout problème éventuel.</p>
+            <h3 class="mb-3">Éducation et Sensibilisation</h3>
+            <p class="mb-4">Le Zoo Arcadia propose également des visites guidées de notre parc de panneaux solaires pour sensibiliser le public aux avantages des énergies renouvelables. Des panneaux d'information et des bornes interactives sont disponibles pour apprendre de manière ludique et éducative.</p>
+            <h3 class="mb-3">Futur et Expansion</h3>
+            <p>Nous prévoyons d'étendre notre parc de panneaux solaires dans les prochaines années pour augmenter notre production d'énergie renouvelable. Nous explorons également d'autres sources d'énergie verte comme l'éolien et la géothermie.</p>
+        </div>
+    </div>
+</div>
+
+
+
+    {% include 'footer.html.twig' %}
+{% endblock %}
+

@@ -11,20 +11,20 @@
                     <a class="nav-link active" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href={{ path("app_services") }}>Services</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="true">
                         Habitats
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="savane.html">La Savane</a></li>
-                        <li><a class="dropdown-item" href="jungle.html">La Jungle</a></li>
-                        <li><a class="dropdown-item" href="marais.html">Les Marais</a></li>
+                        <li><a class="dropdown-item" href="{{ path("app_savane") }}">La Savane</a></li>
+                        <li><a class="dropdown-item" href="{{ path("app_jungle") }}">La Jungle</a></li>
+                        <li><a class="dropdown-item" href="{{ path("app_marais") }}">Les Marais</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="energies.html">Énergies</a>
+                    <a class="nav-link" href="{{ path("app_energies") }}">Énergies</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>

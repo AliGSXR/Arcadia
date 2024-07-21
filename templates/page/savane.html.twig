@@ -1,0 +1,314 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La Savane{% endblock %}
+
+{% block body %}
+
+
+
+<header class="bg-image text-center text-white d-flex align-items-center" style="background-image: url({{ asset('assets/img/lion2.jpg') }}); height: 80vh;">
+    <div class="container">
+        <h1 class="display-4" style="font-size: 95px;color: rgb(246, 243, 241);">La Savane</h1>
+        <p class="lead" style="font-size: 40px;">Découvrez les merveilles de la savane africaine et les animaux majestueux qui y résident.</p>
+    </div>
+
+
+</header>
+
+
+
+    <div class="container mt-5">
+    <!-- Introduction à la Savane -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <img src="{{ asset('assets/img/savane2.jpg') }}" id="sav-head" class="img-fluid rounded-circle" alt="La Savane">
+                </div>
+                <div class="col-md-6">
+                    <h2>Bienvenue dans la Savane d'Arcadia</h2>
+                    <p>La savane est un vaste écosystème caractérisé par de grandes étendues d'herbes hautes parsemées de quelques arbres et buissons. C'est le foyer de nombreux animaux emblématiques de l'Afrique, offrant un spectacle naturel époustouflant et une biodiversité riche.</p>
+                </div>
+            </div>
+
+            <!-- Présentation des Animaux -->
+            <div class="row">
+                <!-- Lion -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ asset('assets/img/Lion King of Zoo7280419275.jpg') }}" class="card-img-top" alt="Lion">
+                        <div class="card-body">
+                            <h5 class="card-title">Lion</h5>
+                            <p class="card-text">Le lion, connu comme le roi de la savane, est un prédateur redoutable. Les lions vivent en groupes appelés fiertés, et leur rugissement peut être entendu à des kilomètres à la ronde.</p>
+                            <button type="button" id="btn-sav"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lionModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Lion -->
+                <div class="modal fade" id="lionModal" tabindex="-1" aria-labelledby="lionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="lionModalLabel">Détails sur le Lion</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ asset('assets/img/Lion King of Zoo7280419275.jpg') }}" class="img-fluid" alt="Lion">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Panthera leo</li>
+                                            <li>Poids : 150-250 kg</li>
+                                            <li>Longueur : 2.5-3.3 m</li>
+                                            <li>Espérance de vie : 10-14 ans dans la nature</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>Le lion est en bonne santé générale. Son alimentation est surveillée de près pour s'assurer qu'il reçoit tous les nutriments nécessaires. Une attention particulière est portée à ses dents et ses griffes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Éléphant -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ asset('assets/img/Elephant-Billy-Trunk-Up-Waterfall-JEP_3092.jpg') }}" class="card-img-top" alt="Éléphant">
+                        <div class="card-body">
+                            <h5 class="card-title">Éléphant</h5>
+                            <p class="card-text">Les éléphants d'Afrique sont les plus grands animaux terrestres. Ils sont reconnus pour leur intelligence, leur mémoire exceptionnelle et leurs structures sociales complexes. Les éléphants utilisent leur trompe pour boire, se nourrir et interagir avec leur environnement.</p>
+                            <button type="button" id="btn-sav" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#elephantModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Éléphant -->
+                <div class="modal fade" id="elephantModal" tabindex="-1" aria-labelledby="elephantModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elephantModalLabel">Détails sur l'Éléphant</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ asset('assets/img/Elephant-Billy-Trunk-Up-Waterfall-JEP_3092.jpg') }}" class="img-fluid" alt="Éléphant">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Loxodonta africana</li>
+                                            <li>Poids : 4-7 tonnes</li>
+                                            <li>Longueur : 6-7.5 m</li>
+                                            <li>Espérance de vie : 60-70 ans</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>L'éléphant est en excellente condition physique. Son régime alimentaire est riche en fibres pour maintenir une bonne digestion. Des contrôles réguliers sont effectués pour surveiller sa santé globale.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Girafe -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ asset('assets/img/Girafe-langue-eau-zoo-des-Sables-SSilhol.jpg') }}" class="card-img-top" alt="Girafe">
+                        <div class="card-body">
+                            <h5 class="card-title">Girafe</h5>
+                            <p class="card-text">Les girafes sont les plus grands mammifères terrestres. Avec leur long cou, elles se nourrissent des feuilles des arbres et sont facilement reconnaissables par leurs taches uniques. Les girafes utilisent leur hauteur pour surveiller les prédateurs et peuvent courir à des vitesses allant jusqu'à 60 km/h.</p>
+                            <button type="button" id="btn-sav" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#girafeModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Girafe -->
+                <div class="modal fade" id="girafeModal" tabindex="-1" aria-labelledby="girafeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="girafeModalLabel">Détails sur la Girafe</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ asset('assets/img/Girafe-langue-eau-zoo-des-Sables-SSilhol.jpg') }}" class="img-fluid" alt="Girafe">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Giraffa camelopardalis</li>
+                                            <li>Poids : 800-1200 kg</li>
+                                            <li>Hauteur : 4.5-6 m</li>
+                                            <li>Espérance de vie : 25 ans dans la nature</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>La girafe est en bonne santé. Son alimentation comprend une variété de feuilles et de branches pour garantir une nutrition équilibrée. Ses sabots et sa dentition sont inspectés régulièrement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guépard -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ asset('assets/img/guepard-18102020-4-carre-1-scaled.jpg') }}" class="card-img-top" alt="Guépard">
+                        <div class="card-body">
+                            <h5 class="card-title">Guépard</h5>
+                            <p class="card-text">Le guépard est le mammifère terrestre le plus rapide, capable d'atteindre des vitesses de 112 km/h en courtes pointes. Ils sont connus pour leur corps élancé et leurs marques distinctives.</p>
+                            <button type="button" id="btn-sav" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guepardModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Guépard -->
+                <div class="modal fade" id="guepardModal" tabindex="-1" aria-labelledby="guepardModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="guepardModalLabel">Détails sur le Guépard</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ ('assets/img/guepard-18102020-4-carre-1-scaled.jpg') }}" class="img-fluid" alt="Guépard">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Acinonyx jubatus</li>
+                                            <li>Poids : 35-72 kg</li>
+                                            <li>Longueur : 1.1-1.5 m</li>
+                                            <li>Espérance de vie : 10-12 ans dans la nature</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>Le guépard est en bonne santé. Son alimentation comprend principalement des proies rapides comme les antilopes. Des examens réguliers sont effectués pour surveiller sa condition physique.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gnou -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ asset('assets/img/gnou.jpg') }}" class="card-img-top" alt="Gnou">
+                        <div class="card-body">
+                            <h5 class="card-title">Gnou</h5>
+                            <p class="card-text">Les gnous sont des herbivores emblématiques de la savane africaine. Ils vivent en grands troupeaux et sont connus pour leur migration annuelle spectaculaire à la recherche de pâturages frais.</p>
+                            <button type="button" id="btn-sav" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gnouModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Gnou -->
+                <div class="modal fade" id="gnouModal" tabindex="-1" aria-labelledby="gnouModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="gnouModalLabel">Détails sur le Gnou</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ asset('assets/img/gnou.jpg') }}" class="img-fluid" alt="Gnou">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Connochaetes taurinus</li>
+                                            <li>Poids : 120-270 kg</li>
+                                            <li>Longueur : 1.5-2.4 m</li>
+                                            <li>Espérance de vie : 20 ans dans la nature</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>Le gnou est en bonne santé. Son régime alimentaire consiste principalement en herbes et il participe à des examens réguliers pour surveiller sa condition physique et prévenir les maladies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rhinocéros -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ ('assets/img/rhino.jpg') }}" class="card-img-top" alt="Rhinocéros">
+                        <div class="card-body">
+                            <h5 class="card-title">Rhinocéros</h5>
+                            <p class="card-text">Les rhinocéros sont des géants de la savane, connus pour leur grande taille et leur corne distinctive. Ils sont souvent solitaires et jouent un rôle crucial dans leur écosystème en façonnant leur environnement.</p>
+                            <button type="button" id="btn-sav" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rhinocerosModal">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Rhinocéros -->
+                <div class="modal fade" id="rhinocerosModal" tabindex="-1" aria-labelledby="rhinocerosModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="rhinocerosModalLabel">Détails sur le Rhinocéros</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{ ('assets/img/rhino.jpg') }}" class="img-fluid" alt="Rhinocéros">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Caractéristiques</h5>
+                                        <ul>
+                                            <li>Race : Rhinocerotidae</li>
+                                            <li>Poids : 800-1400 kg</li>
+                                            <li>Longueur : 2.5-4 m</li>
+                                            <li>Espérance de vie : 35-50 ans dans la nature</li>
+                                        </ul>
+                                        <h5>Avis du Vétérinaire</h5>
+                                        <p>Le rhinocéros est en bonne santé. Son alimentation consiste principalement en herbes et en feuillage. Des contrôles réguliers sont effectués pour surveiller sa santé, notamment sa corne et sa peau.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+            {% include 'footer.html.twig' %}
+{% endblock %}
+

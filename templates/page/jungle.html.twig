@@ -1,0 +1,409 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La Jungle{% endblock %}
+
+{% block body %}
+    <header class="bg-image text-center text-white d-flex align-items-center" style="background-image: url({{ asset('assets/img/tiger-in-petchaburi.jpg') }}); height: 80vh;">
+        <div class="container">
+            <h1 class="display-4" style="font-size: 95px;color: rgb(246, 243, 241);">La Jungle</h1>
+            <p class="lead" style="font-size: 40px;">Explorez les mystères de la jungle et rencontrez ses fascinants habitants.</p>
+        </div>
+    </header>
+
+
+    <div class="container mt-5">
+
+
+        <!-- Introduction à la Jungle -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img src="{{ asset('assets/img/jungle.jpg') }}" id="sav-head" class="img-fluid rounded-circle" alt="La Jungle" >
+            </div>
+            <div class="col-md-6 text-center">
+                <h2>Bienvenue dans la Jungle</h2>
+                <hr>
+                <p style="font-size: 24px;">La jungle est un écosystème dense et luxuriant, abritant une incroyable diversité de flore et de faune. C'est un lieu de vie pour de nombreux animaux exotiques et une véritable aventure pour ceux qui la visitent.</p>
+            </div>
+        </div>
+
+        <!-- Présentation des Animaux -->
+        <div class="row">
+            <!-- Tigre -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ ('assets/img/tiger.jpg') }}" class="card-img-top" alt="Tigre">
+                    <div class="card-body">
+                        <h5 class="card-title">Tigre</h5>
+                        <p class="card-text">Le tigre est le plus grand des félins. Il est connu pour ses rayures distinctives et son comportement solitaire. Les tigres sont de puissants prédateurs, excellents nageurs, et ils jouent un rôle clé dans leur écosystème.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tigreModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Tigre -->
+            <div class="modal fade" id="tigreModal" tabindex="-1" aria-labelledby="tigreModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="tigreModalLabel">Détails sur le Tigre</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/tiger.jpg') }}" class="img-fluid" alt="Tigre">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Tiger </li>
+                                        <li>Race : Panthera tigris</li>
+                                        <li>Poids : 100-300 kg</li>
+                                        <li>Longueur : 2.5-3.3 m</li>
+                                        <li>Espérance de vie : 10-15 ans dans la nature</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le tigre est en bonne santé. Son alimentation est composée principalement de viande fraîche, et des contrôles réguliers sont effectués pour s'assurer de son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chimpanzé -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/chimpanze.jpg') }}" class="card-img-top" alt="Chimpanzé">
+                    <div class="card-body">
+                        <h5 class="card-title">Chimpanzé</h5>
+                        <p class="card-text">Les chimpanzés sont des primates extrêmement intelligents et sociaux. Ils vivent en groupes et utilisent des outils pour se nourrir. Les chimpanzés partagent environ 98% de leur ADN avec les humains.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chimpanzeModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Chimpanzé -->
+            <div class="modal fade" id="chimpanzeModal" tabindex="-1" aria-labelledby="chimpanzeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="chimpanzeModalLabel">Détails sur le Chimpanzé</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/chimpanze.jpg') }}" class="img-fluid" alt="Chimpanzé">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Chita </li>
+                                        <li>Race : Pan troglodytes</li>
+                                        <li>Poids : 32-60 kg</li>
+                                        <li>Hauteur : 1-1.7 m</li>
+                                        <li>Espérance de vie : 40-50 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le chimpanzé est en bonne santé. Son alimentation variée comprend des fruits, des légumes et des protéines. Des enrichissements cognitifs sont fournis pour stimuler leur intelligence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gibbon -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/gibbons.jpg') }}" class="card-img-top" alt="Gibbon">
+                    <div class="card-body">
+                        <h5 class="card-title">Gibbon</h5>
+                        <p class="card-text">Les gibbons sont des singes acrobatiques connus pour leurs chants mélodieux et leurs déplacements rapides à travers les arbres. Ils sont monogames et vivent en petits groupes familiaux.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gibbonModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Gibbon -->
+            <div class="modal fade" id="gibbonModal" tabindex="-1" aria-labelledby="gibbonModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="gibbonModalLabel">Détails sur le Gibbon</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/gibbons.jpg') }}" class="img-fluid" alt="Gibbon">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Kong </li>
+                                        <li>Race : Hylobatidae</li>
+                                        <li>Poids : 5-12 kg</li>
+                                        <li>Longueur : 40-60 cm</li>
+                                        <li>Espérance de vie : 25-30 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Les gibbons sont en bonne santé. Ils bénéficient d'une alimentation riche en fruits, légumes et feuilles. Des structures pour grimper et se balancer sont mises en place pour favoriser leur activité physique.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orang-outan -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/oranoutan.jpg') }}" class="card-img-top" alt="Orang-outan">
+                    <div class="card-body">
+                        <h5 class="card-title">Orang-outan</h5>
+                        <p class="card-text">Les orangs-outans sont des primates intelligents et solitaires. Ils passent la majeure partie de leur temps dans les arbres et construisent des nids pour dormir. Ils sont menacés par la déforestation.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orangOutanModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Orang-outan -->
+            <div class="modal fade" id="orangOutanModal" tabindex="-1" aria-labelledby="orangOutanModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="orangOutanModalLabel">Détails sur l'Orang-outan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/oranoutan.jpg') }}" class="img-fluid" alt="Orang-outan">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Mama </li>
+                                        <li>Race : Pongo pygmaeus (Bornéo) / Pongo abelii (Sumatra)</li>
+                                        <li>Poids : 30-90 kg</li>
+                                        <li>Longueur : 1.2-1.5 m</li>
+                                        <li>Espérance de vie : 30-40 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>L'orang-outan est en bonne santé. Son alimentation est composée de fruits, de feuilles et de petits insectes. Des enrichissements sont fournis pour stimuler leur intelligence et leur comportement naturel.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/python.jpg') }}" class="card-img-top" alt="Python">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                        <p class="card-text">Le python est un serpent constricteur, connu pour sa taille impressionnante et sa force. Il chasse en étouffant ses proies avant de les avaler. Les pythons sont souvent trouvés près de l'eau dans les jungles.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pythonModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Python -->
+            <div class="modal fade" id="pythonModal" tabindex="-1" aria-labelledby="pythonModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pythonModalLabel">Détails sur le Python</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/python.jpg') }}" class="img-fluid" alt="Python">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Knase </li>
+                                        <li>Race : Pythonidae</li>
+                                        <li>Longueur : 3-7 m</li>
+                                        <li>Poids : 30-90 kg</li>
+                                        <li>Espérance de vie : 20-30 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le python est en bonne santé. Son alimentation se compose principalement de petits mammifères et d'oiseaux. Un habitat avec des cachettes et un point d'eau est fourni pour son confort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gorille -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/gorille2.jpg') }}" class="card-img-top" alt="Gorille">
+                    <div class="card-body">
+                        <h5 class="card-title">Gorille</h5>
+                        <p class="card-text">Les gorilles sont les plus grands des primates. Ils vivent en groupes dirigés par un mâle dominant. Les gorilles sont principalement herbivores et passent beaucoup de temps à chercher de la nourriture et à socialiser.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gorilleModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Gorille -->
+            <div class="modal fade" id="gorilleModal" tabindex="-1" aria-labelledby="gorilleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="gorilleModalLabel">Détails sur le Gorille</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/gorille2.jpg') }}" class="img-fluid" alt="Gorille">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Bud</li>
+                                        <li>Race : Gorilla beringei / Gorilla gorilla</li>
+                                        <li>Poids : 100-250 kg</li>
+                                        <li>Hauteur : 1.4-1.8 m</li>
+                                        <li>Espérance de vie : 35-40 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le gorille est en bonne santé. Son alimentation est riche en fruits, feuilles et végétation. Des enrichissements sociaux et environnementaux sont fournis pour assurer son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perroquet -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/perroquet3.jpg') }}" class="card-img-top" alt="Perroquet">
+                    <div class="card-body">
+                        <h5 class="card-title">Perroquet</h5>
+                        <p class="card-text">Les perroquets sont des oiseaux colorés et intelligents, connus pour leur capacité à imiter les sons et la parole. Ils vivent en groupes sociaux et se nourrissent principalement de graines, de fruits et de noix.</p>
+                        <button type="button" id="btn-jun" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#perroquetModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Perroquet -->
+            <div class="modal fade" id="perroquetModal" tabindex="-1" aria-labelledby="perroquetModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="perroquetModalLabel">Détails sur le Perroquet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/perroquet3.jpg') }}" class="img-fluid" alt="Perroquet">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Tic Tac </li>
+                                        <li>Race : Psittaciformes</li>
+                                        <li>Longueur : 10-100 cm (selon l'espèce)</li>
+                                        <li>Poids : 100-1500 g</li>
+                                        <li>Espérance de vie : 20-80 ans (selon l'espèce)</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le perroquet est en bonne santé. Son alimentation se compose de graines, fruits et noix. Des enrichissements sont fournis pour stimuler leur intelligence et leur besoin de socialisation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panthère -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/panth.jpg') }}" class="card-img-top" alt="Panthère">
+                    <div class="card-body">
+                        <h5 class="card-title">Panthère</h5>
+                        <p class="card-text">La panthère est un prédateur agile et furtif. Connue pour sa robe tachetée, elle est capable de grimper aux arbres et de chasser de nuit. La panthère joue un rôle crucial dans l'équilibre de son écosystème.</p>
+                        <button type="button" id="btn-jun"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#panthereModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Panthère -->
+            <div class="modal fade" id="panthereModal" tabindex="-1" aria-labelledby="panthereModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="panthereModalLabel">Détails sur la Panthère</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/panth.jpg') }}" class="img-fluid" alt="Panthère">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Prénom : Baghéra</li>
+                                        <li>Race : Panthera pardus</li>
+                                        <li>Poids : 30-90 kg</li>
+                                        <li>Longueur : 1.6-1.9 m (sans la queue)</li>
+                                        <li>Espérance de vie : 12-17 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>La panthère est en bonne santé. Son régime alimentaire est composé de viande fraîche. Des structures pour grimper et des zones ombragées sont aménagées pour simuler son habitat naturel.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% include 'footer.html.twig' %}
+{% endblock %}

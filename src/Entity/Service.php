@@ -19,6 +19,9 @@ class Service
     #[ORM\Column(length: 50)]
     private ?string $description = null;
 
+    #[ORM\Column(length: 50)]
+    private ?string $page = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Service
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getPage(): ?string
+    {
+        return $this->page;
+    }
+
+    public function setPage(string $page): static
+    {
+        $this->page = $page;
 
         return $this;
     }

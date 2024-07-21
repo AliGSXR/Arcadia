@@ -1,0 +1,387 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Marais{% endblock %}
+
+{% block body %}
+    <header class="bg-image text-center text-white d-flex align-items-center" style="background-image: url({{ asset('assets/img/fond-marais.jpeg') }}); height: 80vh;">
+        <div class="container">
+            <h1 class="display-4" style="font-size: 95px;color: rgb(246, 243, 241);">Les Marais</h1>
+            <p class="lead" style="font-size: 40px;">Découvrez la richesse et la diversité des habitants des marais, un écosystème unique où chaque espèce joue un rôle vital.</p>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Les Animaux des Marais</h1>
+        <div class="row">
+            <!-- Crocodile -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/croco.jpg') }}" class="card-img-top" alt="Crocodile">
+                    <div class="card-body">
+                        <h5 class="card-title">Crocodile</h5>
+                        <p class="card-text">Le crocodile est un grand reptile amphibie, connu pour ses puissantes mâchoires et son comportement prédateur.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crocodileModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Crocodile -->
+            <div class="modal fade" id="crocodileModal" tabindex="-1" aria-labelledby="crocodileModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="crocodileModalLabel">Détails sur le Crocodile</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/croco.jpg') }}" class="img-fluid" alt="Crocodile">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Crocodylidae</li>
+                                        <li>Poids : 400-1000 kg</li>
+                                        <li>Longueur : 4-7 m</li>
+                                        <li>Espérance de vie : 70-100 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le crocodile est en bonne santé. Il se nourrit principalement de poissons, de mammifères et d'oiseaux. Un grand bassin d'eau et des zones ensoleillées sont essentiels pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hippopotame -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/hypo.jpg') }}" class="card-img-top" alt="Hippopotame">
+                    <div class="card-body">
+                        <h5 class="card-title">Hippopotame</h5>
+                        <p class="card-text">L'hippopotame est un grand mammifère semi-aquatique, connu pour son corps massif et son comportement territorial.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hippopotameModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Hippopotame -->
+            <div class="modal fade" id="hippopotameModal" tabindex="-1" aria-labelledby="hippopotameModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hippopotameModalLabel">Détails sur l'Hippopotame</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/hypo.jpg') }}" class="img-fluid" alt="Hippopotame">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Hippopotamus amphibius</li>
+                                        <li>Poids : 1300-1500 kg</li>
+                                        <li>Longueur : 3.3-5.2 m</li>
+                                        <li>Espérance de vie : 40-50 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>L'hippopotame est en bonne santé. Il se nourrit principalement de plantes aquatiques. Des bassins profonds et des zones ombragées sont essentiels pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flamant Rose -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/flamant2.jpg') }}" class="card-img-top" alt="Flamant Rose">
+                    <div class="card-body">
+                        <h5 class="card-title">Flamant Rose</h5>
+                        <p class="card-text">Le flamant rose est un oiseau célèbre pour ses plumes roses éclatantes et ses longues pattes élancées.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flamantRoseModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Flamant Rose -->
+            <div class="modal fade" id="flamantRoseModal" tabindex="-1" aria-labelledby="flamantRoseModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="flamantRoseModalLabel">Détails sur le Flamant Rose</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/flamant2.jpg') }}" class="img-fluid" alt="Flamant Rose">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Phoenicopterus roseus</li>
+                                        <li>Poids : 2-4 kg</li>
+                                        <li>Hauteur : 1.1-1.5 m</li>
+                                        <li>Espérance de vie : 30-40 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le flamant rose est en bonne santé. Il se nourrit principalement de crustacés et d'algues, qui lui donnent sa couleur distinctive. Des zones d'eau peu profondes sont essentielles pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ragondin -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/ragondin.jpg') }}" class="card-img-top" alt="Ragondin">
+                    <div class="card-body">
+                        <h5 class="card-title">Ragondin</h5>
+                        <p class="card-text">Le ragondin est un grand rongeur semi-aquatique, connu pour sa fourrure dense et ses incisives proéminentes.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ragondinModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Ragondin -->
+            <div class="modal fade" id="ragondinModal" tabindex="-1" aria-labelledby="ragondinModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ragondinModalLabel">Détails sur le Ragondin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/ragondin.jpg') }}" class="img-fluid" alt="Ragondin">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Myocastor coypus</li>
+                                        <li>Poids : 5-9 kg</li>
+                                        <li>Longueur : 40-60 cm (sans la queue)</li>
+                                        <li>Espérance de vie : 6-8 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le ragondin est en bonne santé. Il se nourrit principalement de plantes aquatiques et de petits invertébrés. Un environnement avec beaucoup d'eau et de végétation est essentiel pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chouette Effraie -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/chouette.jpg') }}" class="card-img-top" alt="Chouette Effraie">
+                    <div class="card-body">
+                        <h5 class="card-title">Chouette Effraie</h5>
+                        <p class="card-text">La chouette effraie est un oiseau nocturne, reconnu pour son visage en forme de cœur et son cri perçant.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chouetteEffraieModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Chouette Effraie -->
+            <div class="modal fade" id="chouetteEffraieModal" tabindex="-1" aria-labelledby="chouetteEffraieModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="chouetteEffraieModalLabel">Détails sur la Chouette Effraie</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/chouette.jpg') }}" class="img-fluid" alt="Chouette Effraie">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Tyto alba</li>
+                                        <li>Poids : 0.5-0.7 kg</li>
+                                        <li>Envergure : 85-95 cm</li>
+                                        <li>Espérance de vie : 4-5 ans (à l'état sauvage)</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>La chouette effraie est en bonne santé. Elle se nourrit principalement de petits mammifères et de grands insectes. Des niches élevées et des zones calmes sont essentielles pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Héron -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/heron2.jpg') }}" class="card-img-top" alt="Héron">
+                    <div class="card-body">
+                        <h5 class="card-title">Héron</h5>
+                        <p class="card-text">Le héron est un grand oiseau échassier, connu pour ses longues pattes et son cou allongé.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#heronModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Héron -->
+            <div class="modal fade" id="heronModal" tabindex="-1" aria-labelledby="heronModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="heronModalLabel">Détails sur le Héron</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/heron2.jpg') }}" class="img-fluid" alt="Héron">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Ardeidae</li>
+                                        <li>Poids : 1-2 kg</li>
+                                        <li>Envergure : 1.5-2 m</li>
+                                        <li>Espérance de vie : 15-20 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>Le héron est en bonne santé. Il se nourrit principalement de poissons et d'amphibiens. Des zones humides avec des eaux peu profondes sont essentielles pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grenouille des Marais -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/grenouille.jpg') }}" class="card-img-top" alt="Grenouille des Marais">
+                    <div class="card-body">
+                        <h5 class="card-title">Grenouille des Marais</h5>
+                        <p class="card-text">La grenouille des marais est un amphibien bien adapté aux zones humides, connu pour ses chants distinctifs.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#grenouilleMaraisModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Grenouille des Marais -->
+            <div class="modal fade" id="grenouilleMaraisModal" tabindex="-1" aria-labelledby="grenouilleMaraisModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="grenouilleMaraisModalLabel">Détails sur la Grenouille des Marais</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/grenouille.jpg') }}" class="img-fluid" alt="Grenouille des Marais">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Rana palustris</li>
+                                        <li>Poids : 20-50 g</li>
+                                        <li>Longueur : 6-9 cm</li>
+                                        <li>Espérance de vie : 2-3 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>La grenouille des marais est en bonne santé. Elle se nourrit principalement d'insectes et d'autres petits invertébrés. Des zones d'eau stagnante et une végétation dense sont essentielles pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salamandre -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ asset('assets/img/salamandre.jpg') }}" class="card-img-top" alt="Salamandre">
+                    <div class="card-body">
+                        <h5 class="card-title">Salamandre</h5>
+                        <p class="card-text">La salamandre est un amphibien, reconnaissable à son corps allongé et à ses motifs colorés.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#salamandreModal">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Salamandre -->
+            <div class="modal fade" id="salamandreModal" tabindex="-1" aria-labelledby="salamandreModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="salamandreModalLabel">Détails sur la Salamandre</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('assets/img/salamandre.jpg') }}" class="img-fluid" alt="Salamandre">
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Caractéristiques</h5>
+                                    <ul>
+                                        <li>Race : Salamandridae</li>
+                                        <li>Poids : 20-50 g</li>
+                                        <li>Longueur : 10-20 cm</li>
+                                        <li>Espérance de vie : 10-15 ans</li>
+                                    </ul>
+                                    <h5>Avis du Vétérinaire</h5>
+                                    <p>La salamandre est en bonne santé. Elle se nourrit principalement de petits invertébrés. Des habitats humides avec une couverture végétale dense sont essentiels pour son bien-être.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'footer.html.twig' %}
+{% endblock %}

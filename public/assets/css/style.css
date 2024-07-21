@@ -270,3 +270,8 @@ footer .text-center {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     background-color: forestgreen;
 }
+
+#btn-valid{
+    display: flex;
+    margin-top: 25px;
+}

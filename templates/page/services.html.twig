@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia - Zoo Écologique{% endblock %}
+
+{% block body %}
+
+    <header class="bg-image text-center text-white d-flex align-items-center" style="background-image: url({{ asset('assets/img/lion-services.jpg') }}); height: 80vh;">
+        <div class="container">
+            <h1 style="font-size: 95px;">Nos Services</h1>
+            <p class="lead" style="font-size: 40px;">Découvrez nos services pour rendre votre visite inoubliable.</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div id="shadow-box" class="card mb-5">
+                    <div class="card-body">
+                        <h2 class="card-title">Restauration</h2>
+                        <p class="card-text">Savourez une variété de plats dans nos restaurants et kiosques, adaptés à tous les goûts et régimes alimentaires.</p>
+                    </div>
+                    <img src="{{ asset('assets/img/restaurant.jpg') }}" class="card-img-top" alt="Restauration" style="border-radius: 3em;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="shadow-box" class="card mb-5">
+                    <img src="{{ asset('assets/img/moment-cafe.webp') }}" class="card-img-top" alt="Restauration" style="border-radius: 3em;">
+                    <div class="card-body">
+                        <h4 class="card-title">Notre service</h4>
+                        <p class="card-text">Notre service de restauration vous propose une variété de plats savoureux et équilibrés. Que vous soyez végétarien, végan ou amateur de viandes, vous trouverez des options adaptées à vos goûts. Nos restaurants et kiosques utilisent des ingrédients frais et locaux pour une expérience culinaire inoubliable.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="shadow-box" class="card mb-5">
+                    <img src="{{ asset('assets/img/restaurant.jpg') }}" class="card-img-top" alt="Restauration" style="border-radius: 3em;">
+                    <div class="card-body">
+                        <h4 class="card-title">Nos terrasses</h4>
+                        <p class="card-text">Profitez d'un moment de détente sur notre terrasse extérieure, un espace convivial et verdoyant où vous pourrez vous relaxer tout en savourant nos délicieux plats et boissons. Située au cœur du zoo, notre terrasse offre une vue imprenable sur les habitats des animaux, vous permettant d'observer leur comportement naturel tout en vous reposant.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr">
+
+            <div class="col-md-6">
+                <div id="shadow-box" class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Visite des Habitats avec un Guide</h2>
+                        <p class="card-text">Profitez d'une visite guidée gratuite pour découvrir les habitats et en apprendre davantage sur nos animaux.</p>
+                    </div>
+                    <img src="{{ asset('assets/img/tree.png') }}" class="card-img-top" alt="Visite des Habitats avec un Guide" style="border-radius: 3em;">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="shadow-box" class="card mb-5">
+                    <img src="{{ asset('assets/img/guide-tour.jpg') }}" class="card-img-top" alt="Visite des Habitats avec un Guide" style="border-radius: 3em;">
+                    <div class="card-body">
+                        <p class="card-text">Profitez d'une visite guidée gratuite à travers les différents habitats du zoo. Nos guides expérimentés partageront avec vous des anecdotes fascinantes et des informations éducatives sur les animaux et leurs écosystèmes. Une occasion parfaite pour enrichir vos connaissances et découvrir le monde animalier sous un nouvel angle.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="custom-hr">
+
+            <div class="col-md-6">
+                <div id="shadow-box" class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Visite du Zoo en Petit Train</h2>
+                        <p class="card-text">Explorez le zoo de manière confortable et ludique à bord de notre petit train.</p>
+                    </div>
+                    <img src="{{ asset('assets/img/train.jpg') }}" class="card-img-top" alt="Visite du Zoo en Petit Train" style="border-radius: 3em;">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="shadow-box" class="card mb-5">
+                    <img src="{{ asset('assets/img/train.jpg') }}" class="card-img-top" alt="Visite du Zoo en Petit Train" style="border-radius: 3em;">
+                    <div class="card-body">
+                        <p class="card-text">Notre service de restauration vous propose une variété de plats savoureux et équilibrés. Que vous soyez végétarien, végan ou amateur de viandes, vous trouverez des options adaptées à vos goûts. Nos restaurants et kiosques utilisent des ingrédients frais et locaux pour une expérience culinaire inoubliable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html.twig' %}
+{% endblock %}
