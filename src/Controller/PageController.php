@@ -60,4 +60,10 @@ class PageController extends AbstractController
     {
         return $this->render('page/energies.html.twig');
     }
+
+    #[Route('/habitats', name: 'app_habitats')]
+    public function habitats(): Response
+    {
+        return $this->render('page/habitats.html.twig');
+    }
 }

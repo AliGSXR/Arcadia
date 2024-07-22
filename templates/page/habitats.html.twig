@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Marais{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+        <header class="my-4">
+            <h1>Habitats des Animaux</h1>
+            <p>Découvrez les différents types d'habitats que nous avons dans notre zoo.</p>
+        </header>
+
+    <div class="container">
+        <div class="row">
+            {% for habitat in habitats %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/' ~ habitat.image) }}" class="card-img-top" alt="{{ habitat.nom }}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ habitat.nom }}</h5>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+        {% endfor %}
+    </div>
+
+
+    {% include 'footer.html.twig' %}
+{% endblock %}

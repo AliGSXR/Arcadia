@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="righteous" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" style="font-family: 'righteous';">
         <img src="{{ asset('assets/img/arcadia.png') }}" alt="Bootstrap" width="60" height="48">
         <a class="navbar-brand" style="font-size: 32px; margin-left: 25px;" href="index.html">Arcadia - ZOO</a>
@@ -13,15 +13,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href={{ path("app_services") }}>Services</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                        Habitats
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ path("app_savane") }}">La Savane</a></li>
-                        <li><a class="dropdown-item" href="{{ path("app_jungle") }}">La Jungle</a></li>
-                        <li><a class="dropdown-item" href="{{ path("app_marais") }}">Les Marais</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ path("app_habitats") }}>Habitats</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path("app_energies") }}">Énergies</a>

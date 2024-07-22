@@ -52,6 +52,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->rapportVeterinaires = new ArrayCollection();
     }
 
+
+
     public function getId(): ?int
     {
         return $this->id;
